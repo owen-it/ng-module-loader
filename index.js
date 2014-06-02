@@ -21,7 +21,7 @@ module.exports = function(content, sourceMap) {
 			exports.push("exports[" + JSON.stringify(name) + "] = angular.module('" + mod + "');");
 		});
 	} else {
-		var mod = Path.basename(this.resourcePath);
+		var mod = path.basename(this.resourcePath);
 		exports.push("exports[" + JSON.stringify(name) + "] = angular.module('" + mod + "');");
 	}
 	if(sourceMap) {
