@@ -3,6 +3,7 @@
 	Author Tobias Koppers @sokra
 */
 var loaderUtils = require("loader-utils");
+var path = require("path");
 var SourceNode = require("source-map").SourceNode;
 var SourceMapConsumer = require("source-map").SourceMapConsumer;
 var FOOTER = "/*** EXPORTS FROM exports-loader ***/\n";
@@ -11,13 +12,18 @@ module.exports = function(content, sourceMap) {
 	var query = loaderUtils.parseQuery(this.query);
 	var exports = [];
 	var keys = Object.keys(query);
-	keys.forEach(function(name) {
-		var mod = name;
-		if(typeof query[name] == "string") {
-			mod = query[name];
-		}
-		exports.push("exports[" + JSON.stringify(name) + "] = angular.module(" + mod + ");");
-	});
+	if (keys.length > 0) {
+		keys.forEach(function(name) {
+			var mod = name;
+			if(typeof query[name] == "string") {
+				mod = query[name];
+			}
+			exports.push("exports[" + JSON.stringify(name) + "] = angular.module('" + mod + "');");
+		});
+	} else {
+		var mod = Path.basename(this.resourcePath);
+		exports.push("exports[" + JSON.stringify(name) + "] = angular.module('" + mod + "');");
+	}
 	if(sourceMap) {
 		var currentRequest = loaderUtils.getCurrentRequest(this);
 		var node = SourceNode.fromStringWithSourceMap(content, new SourceMapConsumer(sourceMap));
