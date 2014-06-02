@@ -1,5 +1,5 @@
 {
-	"name": "angular-loader",
+	"name": "ng-loader",
 	"version": "0.6.2",
 	"author": "Tobias Koppers @sokra",
 	"description": "exports loader module for webpack",
