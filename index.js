@@ -12,17 +12,8 @@ module.exports = function(content, sourceMap) {
 	var query = loaderUtils.parseQuery(this.query);
 	var exports = [];
 	var keys = Object.keys(query);
-	if (keys.length > 0) {
-		keys.forEach(function(name) {
-			var mod = name;
-			if(typeof query[name] == "string") {
-				mod = query[name];
-			}
-			exports.push("exports[" + JSON.stringify(name) + "] = angular.module('" + mod + "');");
-		});
-	} else {
-		var mod = path.basename(this.resourcePath);
-		exports.push("exports[" + JSON.stringify(name) + "] = angular.module('" + mod + "');");
+	if (keys.length == 1) {
+			exports.push("module.exports = window.angular.module('" + keys[0] + "');");
 	}
 	if(sourceMap) {
 		var currentRequest = loaderUtils.getCurrentRequest(this);
