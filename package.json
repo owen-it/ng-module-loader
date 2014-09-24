@@ -1,8 +1,8 @@
 {
 	"name": "ng-loader",
-	"version": "0.6.2",
-	"author": "Tobias Koppers @sokra",
-	"description": "exports loader module for webpack",
+	"version": "1.0.0",
+	"author": "Geoff Goodman @filearts",
+	"description": "Webpack loader to export Angular.js modules",
 	"dependencies": {
 		"loader-utils": "0.2.x",
 		"source-map": "0.1.x"
