@@ -1,6 +1,6 @@
 {
   "name": "ng-module-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Geoff Goodman @filearts",
   "description": "Webpack loader to export Angular.js modules",
   "dependencies": {
