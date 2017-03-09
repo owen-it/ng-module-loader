@@ -1,6 +1,6 @@
 {
-	"name": "ng-loader",
-	"version": "1.0.0",
+	"name": "ng-module-loader",
+	"version": "0.0.1",
 	"author": "Geoff Goodman @filearts",
 	"description": "Webpack loader to export Angular.js modules",
 	"dependencies": {
@@ -9,7 +9,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:webpack/exports-loader.git"
+		"url": "https://github.com/owen-it/ng-module-loader.git"
 	},
 	"licenses": [
 		{
