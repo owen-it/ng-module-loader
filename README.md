@@ -5,7 +5,8 @@
 ``` javascript
 require("ng-loader?myModule!./file.js");
 // adds below code the the file's source:
-//  exports["file"] = angular.module("myModule");
+// exports["file"] = angular.module("myModule");
+```
 
 [Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
 
