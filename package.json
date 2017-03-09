@@ -1,20 +1,20 @@
 {
-	"name": "ng-module-loader",
-	"version": "0.0.1",
-	"author": "Geoff Goodman @filearts",
-	"description": "Webpack loader to export Angular.js modules",
-	"dependencies": {
-		"loader-utils": "0.2.x",
-		"source-map": "0.1.x"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/owen-it/ng-module-loader.git"
-	},
-	"licenses": [
-		{
-			"type": "MIT",
-			"url": "http://www.opensource.org/licenses/mit-license.php"
-		}
-	]
+  "name": "ng-module-loader",
+  "version": "0.0.2",
+  "author": "Geoff Goodman @filearts",
+  "description": "Webpack loader to export Angular.js modules",
+  "dependencies": {
+    "loader-utils": "0.2.x",
+    "source-map": "0.1.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/owen-it/ng-module-loader.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ]
 }
